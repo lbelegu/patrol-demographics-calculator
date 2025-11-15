@@ -10,7 +10,7 @@ export default function MapView() {
 
     // fetch GeoJSON data on component mount
     useEffect(() => {
-        fetch("/police-district-demographics/raleigh_demographic_police_data_wgs84.geojson")
+        fetch("/police-district-demographics/results/NC/raleigh.geojson")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`GeoJSON fetch failed: ${response.statusText}`);

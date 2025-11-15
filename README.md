@@ -37,4 +37,4 @@ npm install
 npm run dev
 ```
 
-Then open the URl shown in your terminal.
+Then open the URL shown in your terminal.
