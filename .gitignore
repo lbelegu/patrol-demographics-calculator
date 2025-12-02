@@ -12,6 +12,10 @@ dist
 .env
 dist-ssr
 *.local
+.venv/
+venv/
+
+data/*/census_block_groups.geojson
 
 # Editor directories and files
 .vscode/*
