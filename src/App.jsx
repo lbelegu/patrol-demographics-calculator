@@ -1,23 +1,6 @@
 import { useState } from 'react';
 import MapView from './MapView.jsx';
-
-// list of available cities (move to seperate config file later)
-const CITIES = [
-  {
-    id: 'raleigh-nc',
-    name: "Raleigh, NC",
-    file: "NC/raleigh.geojson",
-    lat: 35.7796,
-    lng: -78.6382
-  },
-  {
-    id: 'charlotte-nc',
-    name: "Charlotte, NC",
-    file: "NC/charlotte.geojson",
-    lat: 35.2271,
-    lng: -80.8431
-  },
-];
+import { CITIES } from './cities.js';
 
 function Navbar() {
   return (
