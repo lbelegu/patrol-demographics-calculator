@@ -28,11 +28,11 @@ cd police-district-demographics
 
 ### 2. Install Dependencies
 You need both the frontend dependencies (Node.js) and backend processing tools (Python).
-### Frontend:
+#### Frontend:
 ```bash
 npm install
 ```
-### Data Processing (Python):
+#### Data Processing (Python):
 It is recommended to use a virtual environment.
 ```bash
 python3 -m venv .venv
@@ -51,21 +51,21 @@ Follow these steps to process demographic data for a new city.
 
 ### Step 1: Add Raw Data
 
-1. Find the Data: Download the "Police Districts" or "Patrol Areas" Shapefile/GeoJSON from the city's open data portal.
+1. **Find the Data:** Download the "Police Districts" or "Patrol Areas" Shapefile/GeoJSON from the city's open data portal.
 
-2. Create Folders:
+2. **Create Folders:**
 - Navigate to the ```data/``` directory.
 - Find or create the State folder (e.g., ```data/IL```).
 - Create a City folder inside it (e.g., ```data/IL/charlotte```).
 
-3. Save File: Place your police district file in that city folder and rename it to ```police_districts.geojson```.
+3. **Save File:** Place your police district file in that city folder and rename it to ```police_districts.geojson```.
 
 ### Step 2: Download Census Blocks
 This script automatically detects which states you have folders for in ```data/``` and downloads the necessary Census Block Group shapes from the US Census Bureau.
 ```bash
 python scripts/dwnld_census_block_groups.py
 ```
-Note: This script skips states that have already been downloaded.
+*Note: This script skips states that have already been downloaded.*
 
 ### Step 3: Process the Demographics
 This script intersects the police districts with the census blocks to calculate demographic estimates.
