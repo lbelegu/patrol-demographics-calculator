@@ -40,6 +40,27 @@ export const CITIES = [
         file: "GA/atlanta.geojson",
         lat: 33.7501,
         lng: -84.3885
+    },
+    { 
+        id: 'philadelphia-pa', 
+        name: "Philadelphia, PA", 
+        file: "PA/philadelphia.geojson", 
+        lat: 40.0094, 
+        lng: -75.1333 
+    },
+    { 
+        id: 'arlington-tx', 
+        name: "Arlington, TX", 
+        file: "TX/arlington.geojson", 
+        lat: 32.7007, 
+        lng: -97.1247 
+    },
+    { 
+        id: 'austin-tx', 
+        name: "Austin, TX", 
+        file: "TX/austin.geojson", 
+        lat: 30.3039, 
+        lng: -97.7544 
     }
     
 ];
