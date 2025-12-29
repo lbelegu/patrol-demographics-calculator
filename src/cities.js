@@ -34,4 +34,12 @@ export const CITIES = [
         lat: 41.8781,
         lng: -87.6298
     },
+    {
+        id: 'atlanta-ga',
+        name: "Atlanta, GA",
+        file: "GA/atlanta.geojson",
+        lat: 33.7501,
+        lng: -84.3885
+    }
+    
 ];
