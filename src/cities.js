@@ -80,5 +80,14 @@ export const CITIES = [
         src: "https://opendata-geospatialdenver.hub.arcgis.com/datasets/202b2bb479034e839a7587caa84be3f6_367/explore?location=39.727844%2C-104.921921%2C10.56",
         date: "2026-01-03" 
     },
+    {
+        id: 'austin-tx',
+        name: "Austin, TX",
+        file: "TX/austin.geojson",
+        lat: 30.3039,
+        lng: -97.7544,
+        src: "https://data.austintexas.gov/dataset/Austin-Police-Department-Districts/9jeg-fsk5",
+        date: "2026-01-03"
+    }
     
 ];
