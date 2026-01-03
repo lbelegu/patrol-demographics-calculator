@@ -72,7 +72,7 @@ This script intersects the police districts with the census blocks to calculate 
 
 #### Run for a specific city:
 ```bash
-python scripts/process_city.py --state IL --city chicago
+python scripts/process_city.py --state IL --city chicago --field dist_num
 ```
 #### Arguments:
 
@@ -80,7 +80,7 @@ python scripts/process_city.py --state IL --city chicago
 
 - ```--city```: The city name (folder name).
 
-- ```--col``` (Optional): Manually specify the column name for the district ID if auto-detection fails (e.g., ```--col dist_label```).
+- ```--field```: Variable of patrol area. To identify this, find the variable by which patrol districts seem to be visualized in your source material.
 
 Output: A processed GeoJSON file will be generated in ```public/results/{STATE}/{city}.geojson```.
 
@@ -100,6 +100,7 @@ Output: A processed GeoJSON file will be generated in ```public/results/{STATE}/
     date: "2026-01-03" // date of download, yyyy-mm-dd format
     },
     ```
+ - Latitude and longitude coordinates can be found by searching for your city with https://www.batchgeo.com/map/cities-latitude-longitude.
 
 ### Step 5: Verify
 Run ```npm run dev``` and select your new city from the dropdown menu to verify the map loads and data populates correctly.
