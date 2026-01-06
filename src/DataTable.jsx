@@ -49,7 +49,8 @@ export default function DataTable({ data, city }) {
     const downloadCSV = () => {
         if (!sortedRows.length) return;
 
-        const headers = ["DISTRICT", "TOTAL", "WHITE", "BLACK", "HISPANIC", "ASIAN"];
+        const headers = ["DISTRICT", "TOTAL", "WHITE", "BLACK", "HISPANIC", "ASIAN",
+            "AMERICAN_INDIAN", "PACIFIC_ISLANDER", "TWO_OR_MORE", "OTHER"];
         const csvContent = [
             headers.join(","),
             ...sortedRows.map(row =>
@@ -91,9 +92,9 @@ export default function DataTable({ data, city }) {
                 <h3 className="text-lg font-semibold text-gray-800">District Data: {city.name}</h3>
                 <button
                     onClick={downloadCSV}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-md text-xs sm:text-sm font-medium transition-colors flex items-center gap-1.5 sm:gap-2"
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
                     Download CSV
@@ -110,6 +111,10 @@ export default function DataTable({ data, city }) {
                             <SortableHeader label="Black" sortKey="BLACK" />
                             <SortableHeader label="Hispanic" sortKey="HISPANIC" />
                             <SortableHeader label="Asian" sortKey="ASIAN" />
+                            <SortableHeader label="Am. Indian" sortKey="AMERICAN_INDIAN" />
+                            <SortableHeader label="Pac. Islander" sortKey="PACIFIC_ISLANDER" />
+                            <SortableHeader label="Two+" sortKey="TWO_OR_MORE" />
+                            <SortableHeader label="Other" sortKey="OTHER" />
                         </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
@@ -121,6 +126,10 @@ export default function DataTable({ data, city }) {
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.BLACK.toLocaleString()}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.HISPANIC.toLocaleString()}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.ASIAN.toLocaleString()}</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.AMERICAN_INDIAN.toLocaleString()}</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.PACIFIC_ISLANDER.toLocaleString()}</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.TWO_OR_MORE.toLocaleString()}</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.OTHER.toLocaleString()}</td>
                             </tr>
                         ))}
                     </tbody>
