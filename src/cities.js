@@ -97,5 +97,16 @@ export const CITIES = [
         lng: -73.9387,
         src: "https://www.nyc.gov/content/planning/pages/resources/datasets/police-precincts",
         date: "2026-01-07"
+    },
+    {
+
+        "id": "detroit-mi",
+        "name": "Detroit, MI",
+        "file": "MI/detroit.geojson",
+        "lat": 42.3528,
+        "lng": -83.099,
+        "src": "https://data.detroitmi.gov/datasets/dpd-precincts/explore",
+        "date": "2026-01-09"
+
     }
 ];
