@@ -1,0 +1,62 @@
+name: Add New City
+
+on:
+  workflow_dispatch:
+    inputs:
+      city_name:
+        description: 'City Name (e.g. Charlotte)'
+        required: true
+      state_code:
+        description: 'State Code (e.g. NC)'
+        required: true
+      data_url:
+        description: 'URL to Shapefile (zip) or GeoJSON'
+        required: true
+      district_field:
+        description: 'Field name for District ID in the data'
+        required: true
+      source_info:
+        description: 'Source attribution text/url'
+        required: false
+
+jobs:
+  add-city:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Automation Script
+        run: |
+          python scripts/add_city_automation.py \
+            --state "${{ github.event.inputs.state_code }}" \
+            --city "${{ github.event.inputs.city_name }}" \
+            --url "${{ github.event.inputs.data_url }}" \
+            --field "${{ github.event.inputs.district_field }}" \
+            --source "${{ github.event.inputs.source_info }}"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "feat: add ${{ github.event.inputs.city_name }}, ${{ github.event.inputs.state_code }}"
+          title: "Add ${{ github.event.inputs.city_name }}, ${{ github.event.inputs.state_code }}"
+          body: |
+            Automated addition of **${{ github.event.inputs.city_name }}, ${{ github.event.inputs.state_code }}**.
+            
+            **Source**: ${{ github.event.inputs.source_info }}
+            **Data**: ${{ github.event.inputs.data_url }}
+          branch: "add-city-${{ github.event.inputs.city_name }}"
+          base: main

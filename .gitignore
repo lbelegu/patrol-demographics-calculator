@@ -27,3 +27,4 @@ data/*/census_block_groups.geojson
 *.njsproj
 *.sln
 *.sw?
+__pycache__/
