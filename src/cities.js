@@ -88,6 +88,14 @@ export const CITIES = [
         lng: -97.7544,
         src: "https://data.austintexas.gov/dataset/Austin-Police-Department-Districts/9jeg-fsk5",
         date: "2026-01-03"
+    },
+    {
+        id: 'new_york_city-ny',
+        name: 'New York City, NY',
+        file: "NY/new_york_city.geojson",
+        lat: 40.6635,
+        lng: -73.9387,
+        src: "https://www.nyc.gov/content/planning/pages/resources/datasets/police-precincts",
+        date: "2026-01-07"
     }
-
 ];
