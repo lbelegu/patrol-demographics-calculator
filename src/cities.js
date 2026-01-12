@@ -108,5 +108,16 @@ export const CITIES = [
         "src": "https://data.detroitmi.gov/datasets/dpd-precincts/explore",
         "date": "2026-01-09"
 
+    },
+    {
+
+        "id": "baltimore-md",
+        "name": "Baltimore, MD",
+        "file": "MD/baltimore.geojson",
+        "lat": 39.2846,
+        "lng": -76.6205,
+        "src": "https://hub.arcgis.com/api/v3/datasets/3d893a4354944a629b3d16ee69cb02f1_0/downloads/data?format=geojson&spatialRefId=4326&where=1%3D1",
+        "date": "2026-01-12"
+
     }
 ];
