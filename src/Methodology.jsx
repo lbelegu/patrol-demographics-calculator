@@ -10,24 +10,36 @@ export default function Methodology() {
     };
 
     return (
-        <div className="bg-gray-50 min-h-screen py-12">
-            <div className="max-w-3xl mx-auto px-6">
+        <div className="bg-white min-h-screen">
 
-                {/* Header Section */}
-                <div className="text-center mb-12">
-                    <h1 className="text-4xl font-extrabold text-gray-900 mb-4">Methodology</h1>
-                    <p className="text-xl text-gray-600">
+            {/* Hero Section */}
+            <div
+                className="w-full relative pt-32 pb-16 px-4 text-center bg-cover bg-center"
+                style={{ backgroundImage: `url(${getAssetUrl("images/methodology.jpg")})` }}
+            >
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/75"></div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                    <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-white drop-shadow-md">
+                        Methodology
+                    </h1>
+                    <p className="text-xl text-gray-200 max-w-3xl mx-auto drop-shadow-sm">
                         How we calculate demographic data for custom police districts using U.S. Census Block Groups.
                     </p>
                 </div>
+            </div>
+
+            <div className="max-w-3xl mx-auto px-6 py-12">
 
                 {/* Introduction Text */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-12">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4">The Challenge</h2>
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">The Challenge</h2>
                     <p className="text-gray-700 leading-relaxed mb-4">
                         Police districts rarely align with standard census boundaries. This makes it difficult to know exactly
                         who lives in a specific patrol zone. To solve this, we use a technique called
-                        <strong className="text-blue-600"> Areal Interpolation</strong> (weighted spatial intersection).
+                        <strong className="text-accent"> Areal Interpolation</strong> (weighted spatial intersection).
                     </p>
                     <p className="text-gray-700 leading-relaxed">
                         Below is a step-by-step example using data from <strong>Raleigh, NC</strong> to demonstrate how we transform raw maps into demographic insights.
@@ -40,8 +52,8 @@ export default function Methodology() {
                     {/* Step 1 */}
                     <section>
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="bg-blue-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">1</span>
-                            <h3 className="text-xl font-bold text-gray-900">Police Districts</h3>
+                            <span className="bg-accent text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">1</span>
+                            <h3 className="text-2xl font-bold text-gray-900">Police Districts</h3>
                         </div>
                         <p className="text-gray-700 mb-6 pl-11">
                             The entire city of Raleigh has 6 police districts, all of which are made up of one or more complicated polygons.
@@ -56,8 +68,8 @@ export default function Methodology() {
                     {/* Step 2 */}
                     <section>
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="bg-blue-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">2</span>
-                            <h3 className="text-xl font-bold text-gray-900">Census Neighborhood Populations</h3>
+                            <span className="bg-accent text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">2</span>
+                            <h3 className="text-2xl font-bold text-gray-900">Census Neighborhood Populations</h3>
                         </div>
                         <div className="pl-11 text-gray-700 mb-6 space-y-3">
                             <p>
@@ -77,8 +89,8 @@ export default function Methodology() {
                     {/* Step 3 */}
                     <section>
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="bg-blue-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">3</span>
-                            <h3 className="text-xl font-bold text-gray-900">District Area Overlap</h3>
+                            <span className="bg-accent text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">3</span>
+                            <h3 className="text-2xl font-bold text-gray-900">District Area Overlap</h3>
                         </div>
                         <div className="pl-11 text-gray-700 mb-6 space-y-3">
                             <p>
@@ -101,8 +113,8 @@ export default function Methodology() {
                     {/* Step 4 */}
                     <section>
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="bg-blue-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">4</span>
-                            <h3 className="text-xl font-bold text-gray-900">Neighborhood-District Populations</h3>
+                            <span className="bg-accent text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">4</span>
+                            <h3 className="text-2xl font-bold text-gray-900">Neighborhood-District Populations</h3>
                         </div>
                         <p className="text-gray-700 mb-6 pl-11">
                             Using this area overlap, we calculate the number of residents in each census block that live in each police district. These values are directly representative of population density within a given census block and its geographical overlap with neighboring patrol areas.
@@ -117,8 +129,8 @@ export default function Methodology() {
                     {/* Step 5 */}
                     <section>
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="bg-blue-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">5</span>
-                            <h3 className="text-xl font-bold text-gray-900">Final Aggregation</h3>
+                            <span className="bg-accent text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">5</span>
+                            <h3 className="text-2xl font-bold text-gray-900">Final Aggregation</h3>
                         </div>
                         <p className="text-gray-700 mb-6 pl-11">
                             By aggregating each of these individual populations, we can calculate the total populations and relevant demographics of each patrol area.
