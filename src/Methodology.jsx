@@ -26,7 +26,7 @@ export default function Methodology() {
                         Methodology
                     </h1>
                     <p className="text-xl text-gray-200 max-w-3xl mx-auto drop-shadow-sm">
-                        How we calculate demographic data for custom police districts using U.S. Census Block Groups.
+                        Demographic data calculation for custom districts using U.S. Census Block Groups.
                     </p>
                 </div>
             </div>
