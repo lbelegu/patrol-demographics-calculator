@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <nav className={navClass}>
       <h1 className="text-xl font-bold tracking-wide">
-        <Link to="/" className="hover:text-gray-400 transition-colors">Police Demographics Calculator</Link>
+        <Link to="/" className="hover:text-gray-400 transition-colors">Patrol Demographics Calculator</Link>
       </h1>
       <div className="space-x-6 text-sm font-medium">
         <Link to="/about" className="hover:text-gray-400 transition-colors">About</Link>

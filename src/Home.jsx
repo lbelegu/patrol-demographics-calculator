@@ -66,7 +66,7 @@ export default function Home() {
                     {/* Content */}
                     <div className="relative z-10">
                         <h1 className="text-4xl md:text-5xl font-bold mb-16 text-white drop-shadow-md">
-                            Police Demographics Calculator
+                            Patrol Demographics Calculator
                         </h1>
                         <h2 className="text-3xl font-semibold text-white mb-4 mx-auto max-w-2xl">Mission Statement</h2>
                         <p className="text-white leading-relaxed text-lg mx-auto max-w-2xl">
