@@ -33,7 +33,7 @@ function Navbar() {
 function Footer() {
   return (
     <footer className="bg-accent text-white py-6 text-center text-sm mt-auto">
-      <p>&copy; {new Date().getFullYear()} Police District Demographics. Open Source Project.</p>
+      <p>&copy; {new Date().getFullYear()} Patrol Demographics Calculator. Open Source Project.</p>
     </footer>
   );
 }

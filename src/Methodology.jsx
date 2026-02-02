@@ -37,7 +37,7 @@ export default function Methodology() {
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-12">
                     <h2 className="text-3xl font-bold text-gray-800 mb-4">The Challenge</h2>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                        Police districts rarely align with standard census boundaries. This makes it difficult to know exactly
+                        Patrol districts rarely align with standard census boundaries. This makes it difficult to know exactly
                         who lives in a specific patrol zone. To solve this, we use a technique called
                         <strong className="text-accent"> Areal Interpolation</strong> (weighted spatial intersection).
                     </p>
@@ -53,14 +53,14 @@ export default function Methodology() {
                     <section>
                         <div className="flex items-center gap-3 mb-4">
                             <span className="bg-accent text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">1</span>
-                            <h3 className="text-2xl font-bold text-gray-900">Police Districts</h3>
+                            <h3 className="text-2xl font-bold text-gray-900">Patrol Districts</h3>
                         </div>
                         <p className="text-gray-700 mb-6 pl-11">
-                            The entire city of Raleigh has 6 police districts, all of which are made up of one or more complicated polygons.
+                            The entire city of Raleigh has 6 patrol districts, all of which are made up of one or more complicated polygons.
                         </p>
                         <img
                             src={getAssetUrl("images/methodology_img1.png")}
-                            alt="Map of Raleigh Police Districts"
+                            alt="Map of Raleigh Patrol Districts"
                             className="w-full rounded-lg shadow-md border border-gray-200"
                         />
                     </section>
@@ -73,7 +73,7 @@ export default function Methodology() {
                         </div>
                         <div className="pl-11 text-gray-700 mb-6 space-y-3">
                             <p>
-                                Independently of overlapping police districts, each census neighborhood has a certain population. This population includes individuals of various racial and age groups.
+                                Independently of overlapping patrol districts, each census neighborhood has a certain population. This population includes individuals of various racial and age groups.
                             </p>
                             <p>
                                 Because neighborhoods are shaped in various ways, they are unevenly populated. One neighborhood may have several thousand residents, while another may have only a few hundred.
@@ -94,7 +94,7 @@ export default function Methodology() {
                         </div>
                         <div className="pl-11 text-gray-700 mb-6 space-y-3">
                             <p>
-                                In order to calculate the populations of each police district, we refer to smaller census neighborhoods. While we can overlay census neighborhoods with our police district, the geometries are not easily relatable.
+                                In order to calculate the populations of each patrol district, we refer to smaller census neighborhoods. While we can overlay census neighborhoods with our patrol district, the geometries are not easily relatable.
                             </p>
                             <p>
                                 Some census neighborhoods, which are fully within the district borders, have 100% of their area within the district. However, many more are only partially in the district; these neighborhoods can either have very minimal area overlap (e.g., 5%) or quite a lot (e.g., 80%).
@@ -117,7 +117,7 @@ export default function Methodology() {
                             <h3 className="text-2xl font-bold text-gray-900">Neighborhood-District Populations</h3>
                         </div>
                         <p className="text-gray-700 mb-6 pl-11">
-                            Using this area overlap, we calculate the number of residents in each census block that live in each police district. These values are directly representative of population density within a given census block and its geographical overlap with neighboring patrol areas.
+                            Using this area overlap, we calculate the number of residents in each census block that live in each patrol district. These values are directly representative of population density within a given census block and its geographical overlap with neighboring patrol areas.
                         </p>
                         <img
                             src={getAssetUrl("images/methodology_img4.png")}
@@ -137,7 +137,7 @@ export default function Methodology() {
                         </p>
                         <img
                             src={getAssetUrl("images/methodology_img5.png")}
-                            alt="Final map of Police Patrol District Populations"
+                            alt="Final map of Patrol District Populations"
                             className="w-full rounded-lg shadow-md border border-gray-200"
                         />
                     </section>

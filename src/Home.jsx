@@ -70,7 +70,7 @@ export default function Home() {
                         </h1>
                         {/* <h2 className="text-3xl font-semibold text-white mb-4 mx-auto max-w-2xl">Mission Statement</h2> */}
                         <p className="text-white leading-relaxed text-lg mx-auto max-w-2xl">
-                            Understanding the demographics of police districts is crucial for transparency,
+                            Understanding the demographics of patrol districts is crucial for transparency,
                             equitable policing, and community trust. This tool aggregates open data to visualize
                             who lives in each patrol area, helping researchers, journalists, and citizens
                             identify potential disparities and advocate for fair representation.
