@@ -119,5 +119,16 @@ export const CITIES = [
         "src": "https://hub.arcgis.com/api/v3/datasets/3d893a4354944a629b3d16ee69cb02f1_0/downloads/data?format=geojson&spatialRefId=4326&where=1%3D1",
         "date": "2026-01-12"
 
+    },
+    {
+
+        "id": "miami-fl",
+        "name": "Miami, FL",
+        "file": "FL/miami.geojson",
+        "lat": 25.7824,
+        "lng": -80.2278,
+        "src": "https://datahub-miamigis.opendata.arcgis.com/datasets/18ea60e4964943a4981b60d800fe28e0_0/explore?location=25.782469%2C-80.227576%2C11",
+        "date": "2026-02-10"
+
     }
 ];
