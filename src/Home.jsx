@@ -85,6 +85,7 @@ export default function Home() {
                         <div>
                             <h2 className="text-lg font-semibold text-gray-800 ">Map Filters</h2>
                             <p className="text-sm text-gray-500">Select city and demographic to visualize</p>
+
                         </div>
 
                         <div className="flex space-x-4">
@@ -121,6 +122,13 @@ export default function Home() {
                             activeDemographic={activeDemographic}
                         />
                     </div>
+
+                    {currentCity && (
+                        <div className="w-full max-w-5xl mt-4 text-xs text-gray-500 flex flex-col sm:flex-row sm:gap-6">
+                            <span><span className="font-semibold">Added:</span> {currentCity.added_date}</span>
+                            <span><span className="font-semibold">Source:</span> {currentCity.source_date}</span>
+                        </div>
+                    )}
 
                     {currentCity && geoJsonData && (
                         <DataTable data={geoJsonData} city={currentCity} />

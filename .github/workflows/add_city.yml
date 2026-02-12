@@ -18,6 +18,9 @@ on:
       source_info:
         description: 'Source attribution text/url'
         required: false
+      source_date:
+        description: 'Source Date (YYYY-MM-DD)'
+        required: true
 
 jobs:
   add-city:
@@ -46,7 +49,8 @@ jobs:
             --city "${{ github.event.inputs.city_name }}" \
             --url "${{ github.event.inputs.data_url }}" \
             --field "${{ github.event.inputs.district_field }}" \
-            --source "${{ github.event.inputs.source_info }}"
+            --source "${{ github.event.inputs.source_info }}" \
+            --source_date "${{ github.event.inputs.source_date }}"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5

@@ -6,7 +6,8 @@ export const CITIES = [
         lat: 35.7796,
         lng: -78.6382,
         src: "https://data-ral.opendata.arcgis.com/datasets/a8cd851199cc46029b6b73151711ab75_0/explore?location=35.828283%2C-78.644874%2C10.28",
-        date: "2026-01-03"
+        added_date: "2026-01-03",
+        source_date: "2025-10-09"
     },
     {
         id: 'charlotte-nc',
@@ -15,7 +16,8 @@ export const CITIES = [
         lat: 35.2271,
         lng: -80.8431,
         src: "https://data.charlottenc.gov/datasets/charlotte::cmpd-police-divisions-1/about",
-        date: "2026-01-03"
+        added_date: "2026-01-03",
+        source_date: "2024-12-04"
     },
     {
         id: 'los-angeles-ca',
@@ -24,7 +26,8 @@ export const CITIES = [
         lat: 34.0522,
         lng: -118.2437,
         src: "https://geohub.lacity.org/datasets/lapd-divisions",
-        date: "2026-01-03"
+        added_date: "2026-01-03",
+        source_date: "2023-04-28"
     },
     {
         id: 'sacramento-ca',
@@ -33,7 +36,8 @@ export const CITIES = [
         lat: 38.5816,
         lng: -121.4944,
         src: "https://data.saccounty.gov/datasets/sacramentocounty::sheriff-districts-1/explore?location=38.339142%2C-121.359043%2C9.24",
-        date: "2026-01-03"
+        added_date: "2026-01-03",
+        source_date: "2021-07-15"
     },
     {
         id: 'chicago-il',
@@ -42,7 +46,8 @@ export const CITIES = [
         lat: 41.8781,
         lng: -87.6298,
         src: "https://data.cityofchicago.org/Public-Safety/Boundaries-Police-Districts-current-/fthy-xz3r",
-        date: "2026-01-03"
+        added_date: "2026-01-03",
+        source_date: "2024-12-02"
     },
     {
         id: 'atlanta-ga',
@@ -51,7 +56,8 @@ export const CITIES = [
         lat: 33.7501,
         lng: -84.3885,
         src: "https://opendata.atlantaregional.com/datasets/coaplangis::atlanta-police-department-zones-2019/about",
-        date: "2026-01-03"
+        added_date: "2026-01-03",
+        source_date: "2023-05-23"
     },
     {
         id: 'philadelphia-pa',
@@ -60,7 +66,8 @@ export const CITIES = [
         lat: 40.0094,
         lng: -75.1333,
         src: "https://opendataphilly.org/datasets/police-districts/",
-        date: "2026-01-03"
+        added_date: "2026-01-03",
+        source_date: "2026-01-03" // update this
     },
     {
         id: 'arlington-tx',
@@ -69,7 +76,8 @@ export const CITIES = [
         lat: 32.7007,
         lng: -97.1247,
         src: "https://opendata.arlingtontx.gov/datasets/arlington-police-districts/explore",
-        date: "2026-01-03"
+        added_date: "2026-01-03",
+        source_date: "2023-05-25"
     },
     {
         id: 'denver-co',
@@ -78,7 +86,8 @@ export const CITIES = [
         lat: 39.7619,
         lng: -104.8811,
         src: "https://opendata-geospatialdenver.hub.arcgis.com/datasets/202b2bb479034e839a7587caa84be3f6_367/explore?location=39.727844%2C-104.921921%2C10.56",
-        date: "2026-01-03"
+        added_date: "2026-01-03",
+        source_date: "2026-01-03" // update this
     },
     {
         id: 'austin-tx',
@@ -87,7 +96,8 @@ export const CITIES = [
         lat: 30.3039,
         lng: -97.7544,
         src: "https://data.austintexas.gov/dataset/Austin-Police-Department-Districts/9jeg-fsk5",
-        date: "2026-01-03"
+        added_date: "2026-01-03",
+        source_date: "2026-01-03", // update this
     },
     {
         id: 'new_york_city-ny',
@@ -96,39 +106,37 @@ export const CITIES = [
         lat: 40.6635,
         lng: -73.9387,
         src: "https://www.nyc.gov/content/planning/pages/resources/datasets/police-precincts",
-        date: "2026-01-07"
+        added_date: "2026-01-07",
+        source_date: "2025-11-01"
     },
     {
-
-        "id": "detroit-mi",
-        "name": "Detroit, MI",
-        "file": "MI/detroit.geojson",
-        "lat": 42.3528,
-        "lng": -83.099,
-        "src": "https://data.detroitmi.gov/datasets/dpd-precincts/explore",
-        "date": "2026-01-09"
-
+        id: "detroit-mi",
+        name: "Detroit, MI",
+        file: "MI/detroit.geojson",
+        lat: 42.3528,
+        lng: -83.099,
+        src: "https://data.detroitmi.gov/datasets/dpd-precincts/explore",
+        added_date: "2026-01-09",
+        source_date: "2020-11-06"
     },
     {
-
-        "id": "baltimore-md",
-        "name": "Baltimore, MD",
-        "file": "MD/baltimore.geojson",
-        "lat": 39.2846,
-        "lng": -76.6205,
-        "src": "https://hub.arcgis.com/api/v3/datasets/3d893a4354944a629b3d16ee69cb02f1_0/downloads/data?format=geojson&spatialRefId=4326&where=1%3D1",
-        "date": "2026-01-12"
-
+        id: "baltimore-md",
+        name: "Baltimore, MD",
+        file: "MD/baltimore.geojson",
+        lat: 39.2846,
+        lng: -76.6205,
+        src: "https://hub.arcgis.com/api/v3/datasets/3d893a4354944a629b3d16ee69cb02f1_0/downloads/data?format=geojson&spatialRefId=4326&where=1%3D1",
+        added_date: "2026-01-12",
+        source_date: "2025-07-17"
     },
     {
-
-        "id": "miami-fl",
-        "name": "Miami, FL",
-        "file": "FL/miami.geojson",
-        "lat": 25.7824,
-        "lng": -80.2278,
-        "src": "https://datahub-miamigis.opendata.arcgis.com/datasets/18ea60e4964943a4981b60d800fe28e0_0/explore?location=25.782469%2C-80.227576%2C11",
-        "date": "2026-02-10"
-
+        id: "miami-fl",
+        name: "Miami, FL",
+        file: "FL/miami.geojson",
+        lat: 25.7824,
+        lng: -80.2278,
+        src: "https://datahub-miamigis.opendata.arcgis.com/datasets/18ea60e4964943a4981b60d800fe28e0_0/explore?location=25.782469%2C-80.227576%2C11",
+        added_date: "2026-02-10",
+        source_date: "2024-10-22"
     }
 ];

@@ -80,7 +80,7 @@ def download_file(url, target_folder):
 
     print(f"✅ Saved to {target_file}")
 
-def update_frontend_config(state, city, source_url):
+def update_frontend_config(state, city, source_url, source_date, district_field):
     print("Updating src/cities.js...")
     
     # Load the processed result to get centroid
@@ -110,7 +110,9 @@ def update_frontend_config(state, city, source_url):
         "lat": round(center_lat, 4),
         "lng": round(center_lng, 4),
         "src": source_url,
-        "date": today_str
+        "district_field": district_field,
+        "added_date": today_str,
+        "source_date": source_date
     }
     
     js_path = Path("src/cities.js")
@@ -151,6 +153,7 @@ def main():
     parser.add_argument("--url", required=True)
     parser.add_argument("--field", required=True)
     parser.add_argument("--source", default="")
+    parser.add_argument("--source_date", required=True)
     
     args = parser.parse_args()
     
@@ -172,7 +175,7 @@ def main():
     process_city.process_city(state_code, city_slug, args.field)
     
     # 4. Update Frontend
-    update_frontend_config(state_code, args.city, args.source or args.url)
+    update_frontend_config(state_code, args.city, args.source or args.url, args.source_date, args.field)
     
     print("\n🎉 Automation Complete!")
 
