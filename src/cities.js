@@ -138,5 +138,18 @@ export const CITIES = [
         src: "https://datahub-miamigis.opendata.arcgis.com/datasets/18ea60e4964943a4981b60d800fe28e0_0/explore?location=25.782469%2C-80.227576%2C11",
         added_date: "2026-02-10",
         source_date: "2024-10-22"
+    },
+    {
+
+        "id": "portland-or",
+        "name": "Portland, OR",
+        "file": "OR/portland.geojson",
+        "lat": 45.5449,
+        "lng": -122.646,
+        "src": "https://gis-pdx.opendata.arcgis.com/datasets/PDX::police-districts-ppb/about",
+        "district_field": "DISTRICT",
+        "added_date": "2026-02-12",
+        "source_date": "2024-09-12"
+
     }
 ];
