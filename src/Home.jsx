@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import MapView from './MapView.jsx';
 import DataTable from './DataTable.jsx';
-import { CITIES } from './cities';
+import { CITIES, STATE_NAMES } from './cities';
+
 
 // --- Main App Logic ---
 
@@ -107,7 +108,7 @@ export default function Home() {
                             >
                                 <option value="" disabled>Select State</option>
                                 {availableStates.map((state) => (
-                                    <option key={state} value={state}>{state}</option>
+                                    <option key={state} value={state}>{STATE_NAMES[state] || state}</option>
                                 ))}
                             </select>
 
