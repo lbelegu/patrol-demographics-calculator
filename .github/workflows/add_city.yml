@@ -52,6 +52,11 @@ jobs:
             --source "${{ github.event.inputs.source_info }}" \
             --source_date "${{ github.event.inputs.source_date }}"
 
+      - name: Sanitize Branch Name
+        id: sanitize
+        run: |
+          echo "SANITIZED_CITY=$(echo "${{ github.event.inputs.city_name }}" | tr ' ' '-' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
@@ -62,5 +67,5 @@ jobs:
             
             **Source**: ${{ github.event.inputs.source_info }}
             **Data**: ${{ github.event.inputs.data_url }}
-          branch: "add-city-${{ github.event.inputs.city_name }}"
+          branch: "add-city-${{ steps.sanitize.outputs.SANITIZED_CITY }}"
           base: main
