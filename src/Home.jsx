@@ -19,16 +19,26 @@ const MAP_FILTERS = [
 ];
 
 export default function Home() {
+    const [selectedState, setSelectedState] = useState("");
     const [currentCity, setCurrentCity] = useState(null);
     const [geoJsonData, setGeoJsonData] = useState(null);
-    // Default to TOTAL so the map has a state on load
-    const [activeDemographic, setActiveDemographic] = useState('TOTAL');
+    const [activeDemographic, setActiveDemographic] = useState('TOTAL');     // default TOTAL so the map has a state on load
+    const availableStates = [...new Set(CITIES.map(c => c.file.split('/')[0]))].sort();
+
+    const handleStateChange = (e) => {
+        setSelectedState(e.target.value);
+        setCurrentCity(null); // reset city when state changes
+    };
 
     const handleCityChange = (e) => {
         const cityId = e.target.value;
         const city = CITIES.find((c) => c.id === cityId);
         setCurrentCity(city);
     };
+
+    // filter cities based on selected state
+    const filteredCities = CITIES.filter(c => c.file.startsWith(selectedState + '/'))
+        .sort((a, b) => a.name.localeCompare(b.name));
 
     useEffect(() => {
         if (!currentCity) {
@@ -88,15 +98,28 @@ export default function Home() {
 
                         </div>
 
-                        <div className="flex space-x-4">
+                        <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 w-full md:w-auto">
+                            {/* State Select */}
+                            <select
+                                value={selectedState}
+                                onChange={handleStateChange}
+                                className="block w-full md:w-40 px-3 py-2 text-sm border-gray-300 rounded-md border bg-gray-50 focus:ring-blue-500 focus:outline-none focus:border-blue-500"
+                            >
+                                <option value="" disabled>Select State</option>
+                                {availableStates.map((state) => (
+                                    <option key={state} value={state}>{state}</option>
+                                ))}
+                            </select>
+
                             {/* City Select */}
                             <select
                                 value={currentCity ? currentCity.id : ""}
                                 onChange={handleCityChange}
-                                className="block w-full md:w-48 px-3 py-2 text-sm border-gray-300 rounded-md border bg-gray-50 focus:ring-blue-500 focus:outline-none focus:border-blue-500"
+                                disabled={!selectedState}
+                                className={`block w-full md:w-48 px-3 py-2 text-sm border-gray-300 rounded-md border bg-gray-50 focus:ring-blue-500 focus:outline-none focus:border-blue-500 ${!selectedState ? 'opacity-50 cursor-not-allowed' : ''}`}
                             >
-                                <option value="" disabled>Select a City</option>
-                                {[...CITIES].sort((a, b) => a.name.localeCompare(b.name)).map((city) => (
+                                <option value="" disabled>{selectedState ? "Select a City" : "Select State First"}</option>
+                                {filteredCities.map((city) => (
                                     <option key={city.id} value={city.id}>{city.name}</option>
                                 ))}
                             </select>

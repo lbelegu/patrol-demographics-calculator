@@ -141,15 +141,15 @@ export const CITIES = [
     },
     {
 
-        "id": "portland-or",
-        "name": "Portland, OR",
-        "file": "OR/portland.geojson",
-        "lat": 45.5449,
-        "lng": -122.646,
-        "src": "https://gis-pdx.opendata.arcgis.com/datasets/PDX::police-districts-ppb/about",
-        "district_field": "DISTRICT",
-        "added_date": "2026-02-12",
-        "source_date": "2024-09-12"
+        id: "portland-or",
+        name: "Portland, OR",
+        file: "OR/portland.geojson",
+        lat: 45.5449,
+        lng: -122.646,
+        src: "https://gis-pdx.opendata.arcgis.com/datasets/PDX::police-districts-ppb/about",
+        district_field: "DISTRICT",
+        added_date: "2026-02-12",
+        source_date: "2024-09-12"
 
     }
 ];
