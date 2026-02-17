@@ -154,6 +154,18 @@ export const CITIES = [
     },
     {
 
+        "id": "seattle-wa",
+        "name": "Seattle, WA",
+        "file": "WA/seattle.geojson",
+        "lat": 47.6137,
+        "lng": -122.3383,
+        "src": "The Seattle Police Department has different iterations of police beats as the city's needs evolved.  This layer represents what the beats looked like from 2017 to present.   This layer was published in the WGS 1984 Web Mercator Auxiliary Sphere coordinate system.",
+        "district_field": "first_precinct",
+        "added_date": "2026-02-16",
+        "source_date": "2025-02-27"
+
+    }
+];
         "id": "austin-tx",
         "name": "Austin, TX",
         "file": "TX/austin.geojson",
