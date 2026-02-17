@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import MapView from './MapView.jsx';
 import DataTable from './DataTable.jsx';
-import { CITIES, STATE_NAMES } from './cities';
+import { CITIES, STATE_NAMES } from './cities.js';
 
 
 // --- Main App Logic ---
