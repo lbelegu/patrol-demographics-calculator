@@ -164,8 +164,8 @@ export const CITIES = [
         "added_date": "2026-02-16",
         "source_date": "2025-02-27"
 
-    }
-];
+    }, 
+    {
         "id": "austin-tx",
         "name": "Austin, TX",
         "file": "TX/austin.geojson",
