@@ -139,7 +139,10 @@ def update_frontend_config(state, city, source_url, source_date, district_field)
         
         new_block = f"\n    {{\n{inner_obj}\n    }}\n"
         
-        updated_content = pre_content + new_block + "];\n"
+        # Capture everything after the match (e.g. STATE_NAMES)
+        post_content = content[match.end():]
+        
+        updated_content = pre_content + new_block + "];" + post_content
         js_path.write_text(updated_content)
         print(f"✅ Added {city_display} to src/cities.js")
     else:
