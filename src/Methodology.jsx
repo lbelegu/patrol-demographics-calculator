@@ -73,7 +73,7 @@ export default function Methodology() {
                         </div>
                         <div className="pl-11 text-gray-700 mb-6 space-y-3">
                             <p>
-                                Independently of overlapping patrol districts, each census neighborhood has a certain population. This population includes individuals of various racial and age groups.
+                                Independently of overlapping patrol districts, each census neighborhood (more technically, census block group) has a certain population. This population includes individuals of various racial and age groups.
                             </p>
                             <p>
                                 Because neighborhoods are shaped in various ways, they are unevenly populated. One neighborhood may have several thousand residents, while another may have only a few hundred.
