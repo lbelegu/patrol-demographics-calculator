@@ -91,7 +91,7 @@ def process_city(state: str, city: str, district_field: str):
     data_root = Path("data")
     state_folder = data_root / state
     
-    census_bg_path = state_folder / "census_block_groups.geojson"
+    census_bg_path = state_folder / "census_block_groups_2023.geojson"
     police_path = state_folder / city / "police_districts.geojson"
     
     out_dir = Path("public") / "results" / state

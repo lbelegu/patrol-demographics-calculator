@@ -28,3 +28,4 @@ data/*/census_block_groups.geojson
 *.sln
 *.sw?
 __pycache__/
+\n# Ignore large census data files\n**/*census_block_groups_2023.geojson
