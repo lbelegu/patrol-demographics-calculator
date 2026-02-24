@@ -189,6 +189,32 @@ export const CITIES = [
         "added_date": "2026-02-17",
         "source_date": "2021-02-24"
 
+    },
+    {
+
+        "id": "houston-tx",
+        "name": "Houston, TX",
+        "file": "TX/houston.geojson",
+        "lat": 29.8361,
+        "lng": -95.3938,
+        "src": "https://services.arcgis.com/NummVBqZSIJKUeVR/arcgis/rest/services/COH_Houston_Police_Regions_view/FeatureServer/3",
+        "district_field": "Region_String",
+        "added_date": "2026-02-21",
+        "source_date": "2026-02-21"
+
+    },
+    {
+
+        "id": "phoenix-az",
+        "name": "Phoenix, AZ",
+        "file": "AZ/phoenix.geojson",
+        "lat": 33.6044,
+        "lng": -112.1248,
+        "src": "https://maps.phoenix.gov/pub/rest/services/Public/PolicePrecincts/FeatureServer/0",
+        "district_field": "NAME",
+        "added_date": "2026-02-21",
+        "source_date": "2026-02-21"
+
     }
 ];
 
