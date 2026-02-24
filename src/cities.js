@@ -215,6 +215,19 @@ export const CITIES = [
         "added_date": "2026-02-21",
         "source_date": "2026-02-21"
 
+    },
+    {
+
+        "id": "omaha-ne",
+        "name": "Omaha, NE",
+        "file": "NE/omaha.geojson",
+        "lat": 41.2919,
+        "lng": -96.0697,
+        "src": "https://data.dogis.org/datasets/051e9931ae0840f38742367fa560ac0e_0/about",
+        "district_field": "district_text",
+        "added_date": "2026-02-24",
+        "source_date": "2024-10-21"
+
     }
 ];
 
