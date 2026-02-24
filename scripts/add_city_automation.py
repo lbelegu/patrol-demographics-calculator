@@ -169,9 +169,9 @@ def main():
     # 1. Download Data
     download_file(args.url, base_dir)
     
-    # 2. Download Census Blocks (if needed)
-    print("Checking Census Blocks...")
-    dwnld_census_block_groups.download_state_bg_folders()
+    # 2. Download Census Blocks for this state only (if needed)
+    print(f"Checking Census Blocks for {state_code}...")
+    dwnld_census_block_groups.download_single_state_bg(state_code)
     
     # 3. Process City
     print("Processing Demographics...")

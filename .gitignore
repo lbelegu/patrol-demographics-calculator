@@ -15,8 +15,8 @@ dist-ssr
 .venv/
 venv/
 
-data/*/census_block_groups.geojson
-data/*/census_block_groups_2023.geojson
+# Large census GeoJSON files (downloaded at runtime, not needed in repo)
+data/*/*.geojson
 
 # Editor directories and files
 .vscode/*
@@ -29,4 +29,3 @@ data/*/census_block_groups_2023.geojson
 *.sln
 *.sw?
 __pycache__/
-\n# Ignore large census data files\n**/*census_block_groups_2023.geojson
