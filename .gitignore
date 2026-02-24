@@ -16,6 +16,7 @@ dist-ssr
 venv/
 
 data/*/census_block_groups.geojson
+data/*/census_block_groups_2023.geojson
 
 # Editor directories and files
 .vscode/*

@@ -118,11 +118,18 @@ export default function MapView({ city, data, activeDemographic }) {
 }
 
 function StatBox({ label, value, pct, color }) {
+    // Check if pct is a number (including 0)
+    const hasPct = typeof pct === 'number';
+
     return (
         <div className={`flex-shrink-0 min-w-[85px] sm:min-w-0 flex-1 rounded-lg p-2 border ${color} flex flex-col items-center justify-center`}>
-            <span className="text-[10px] sm:text-xs font-bold opacity-70 uppercase tracking-wide truncate w-full text-center">{label}</span>
+            <span className="text-[10px] sm:text-xs font-bold opacity-70 uppercase tracking-wide truncate w-full text-center">
+                {label}
+            </span>
             <span className="text-sm sm:text-lg font-bold mt-0.5">
-                {pct ? (pct * 100).toFixed(1) + '%' : value?.toLocaleString()}
+                {hasPct 
+                    ? (pct * 100).toFixed(1) + '%' 
+                    : (value?.toLocaleString() || '0')}
             </span>
         </div>
     );
