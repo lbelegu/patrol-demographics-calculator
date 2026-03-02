@@ -254,6 +254,19 @@ export const CITIES = [
         "added_date": "2026-03-01",
         "source_date": "2026-02-24"
 
+    },
+    {
+
+        "id": "baltimore-md",
+        "name": "Baltimore, MD",
+        "file": "MD/baltimore.geojson",
+        "lat": 39.2846,
+        "lng": -76.6205,
+        "src": "https://data.baltimorecity.gov/datasets/baltimore::police-districts-4/explore?location=39.284054%2C-76.618882%2C10",
+        "district_field": "Dist_Name",
+        "added_date": "2026-03-02",
+        "source_date": "2026-03-02"
+
     }
 ];
 
