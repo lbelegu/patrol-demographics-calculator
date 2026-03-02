@@ -21,7 +21,7 @@ Built using **React**, **TailwindCSS**, and **Leaflet**, this project allows use
 
 We have automated the process of adding new cities using GitHub Actions!
 
-### 🤖 Automated Method (Recommended)
+### Automated Method (Recommended)
 This method runs entirely in the cloud — no coding required.
 
 1. **Go to the "Actions" Tab**: Click on the [Actions](https://github.com/lbelegu/police-district-demographics/actions) tab in this repository.
@@ -38,7 +38,7 @@ This method runs entirely in the cloud — no coding required.
 
 ---
 
-### 🛠️ Manual Method (Local Development)
+### Manual Method (Local Development)
 If you prefer to run the scripts locally on your machine, follow these steps.
 
 
