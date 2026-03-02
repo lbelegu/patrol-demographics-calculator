@@ -2,7 +2,7 @@ export const CITIES = [
     {
         "id": 'raleigh-nc',
         "name": "Raleigh, NC",
-        "file: "NC/raleigh.geojson",
+        "file": "NC/raleigh.geojson",
         "lat": 35.7796,
         "lng": -78.6382,
         "src": "https://data-ral.opendata.arcgis.com/datasets/a8cd851199cc46029b6b73151711ab75_0/explore?location=35.828283%2C-78.644874%2C10.28",
