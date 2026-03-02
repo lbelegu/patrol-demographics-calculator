@@ -299,6 +299,19 @@ export const CITIES = [
         "added_date": "2026-03-02",
         "source_date": "2026-03-02"
 
+    },
+    {
+
+        "id": "seattle-wa",
+        "name": "Seattle, WA",
+        "file": "WA/seattle.geojson",
+        "lat": 47.6154,
+        "lng": -122.3421,
+        "src": "https://data.seattle.gov/dataset/Seattle-Police-Department-Beats-Web-Mercator-/vhna-33bt/about_data",
+        "district_field": "beat",
+        "added_date": "2026-03-02",
+        "source_date": "2026-03-02"
+
     }
 ];
 
