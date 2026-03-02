@@ -273,6 +273,19 @@ export const CITIES = [
         "added_date": "2026-03-02",
         "source_date": "2026-03-02"
       
+    },
+    {
+
+        "id": "portland-or",
+        "name": "Portland, OR",
+        "file": "OR/portland.geojson",
+        "lat": 45.5449,
+        "lng": -122.646,
+        "src": "https://gis-pdx.opendata.arcgis.com/datasets/police-districts-ppb",
+        "district_field": "DISTRICT",
+        "added_date": "2026-03-02",
+        "source_date": "2026-03-02"
+
     }
 ];
 
