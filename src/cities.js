@@ -241,6 +241,19 @@ export const CITIES = [
         "added_date": "2026-02-24",
         "source_date": "2023-03-13"
 
+    },
+    {
+
+        "id": "san-diego-ca",
+        "name": "San Diego, CA",
+        "file": "CA/san_diego.geojson",
+        "lat": 32.8245,
+        "lng": -117.094,
+        "src": "City of San Diego Open Data and SANGIS",
+        "district_field": "name",
+        "added_date": "2026-03-01",
+        "source_date": "2026-02-24"
+
     }
 ];
 
