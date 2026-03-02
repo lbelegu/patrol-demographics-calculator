@@ -39,7 +39,7 @@ export default function Methodology() {
                     <p className="text-gray-700 leading-relaxed mb-4">
                         Patrol districts rarely align with standard census boundaries. This makes it difficult to know exactly
                         who lives in a specific patrol zone. To solve this, we use a technique called
-                        <strong className="text-accent"> Areal Interpolation</strong> (weighted spatial intersection).
+                        <strong className="text-accent"> Areal Interpolation</strong> (weighted spatial intersection) with the 2023 American Community Survey.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
                         Below is a step-by-step example using data from <strong>Raleigh, NC</strong> to demonstrate how we transform raw maps into demographic insights.
