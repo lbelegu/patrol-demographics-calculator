@@ -351,6 +351,19 @@ export const CITIES = [
         "added_date": "2026-03-02",
         "source_date": "2026-03-02"
 
+    },
+    {
+
+        "id": "virginia-beach-va",
+        "name": "Virginia Beach, VA",
+        "file": "VA/virginia_beach.geojson",
+        "lat": 36.7412,
+        "lng": -76.0741,
+        "src": "https://gis.data.vbgov.com/datasets/c7c01aa81a0c4ba6b3991a49cd0dde23_1/explore",
+        "district_field": "PATROL_ZONE",
+        "added_date": "2026-03-02",
+        "source_date": "2026-03-02"
+
     }
 ];
 
