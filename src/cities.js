@@ -286,6 +286,19 @@ export const CITIES = [
         "added_date": "2026-03-02",
         "source_date": "2026-03-02"
 
+    },
+    {
+
+        "id": "austin-tx",
+        "name": "Austin, TX",
+        "file": "TX/austin.geojson",
+        "lat": 30.3075,
+        "lng": -97.7486,
+        "src": "https://data.austintexas.gov/Public-Safety/Austin-Police-Department-Districts/9jeg-fsk5",
+        "district_field": "patrol_area",
+        "added_date": "2026-03-02",
+        "source_date": "2026-03-02"
+
     }
 ];
 
