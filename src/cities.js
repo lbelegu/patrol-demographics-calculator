@@ -254,6 +254,19 @@ export const CITIES = [
         "added_date": "2026-03-01",
         "source_date": "2026-02-24"
 
+    },
+    {
+
+        "id": "detroit-mi",
+        "name": "Detroit, MI",
+        "file": "MI/detroit.geojson",
+        "lat": 42.3528,
+        "lng": -83.099,
+        "src": "https://data.detroitmi.gov/datasets/dpd-precincts/explore?location=42.352756%2C-83.099019%2C10",
+        "district_field": "name",
+        "added_date": "2026-03-02",
+        "source_date": "2026-03-02"
+
     }
 ];
 
