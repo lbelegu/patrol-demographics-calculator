@@ -17,36 +17,7 @@ Built using **React**, **TailwindCSS**, and **Leaflet**, this project allows use
 - **Data Processing:** Python (Pandas, GeoPandas)
 - **Deployment:** GitHub Pages
 
-## Getting Started
-
-### 1. Clone the Repository
-```bash
-git clone git@github.com:lbelegu/police-district-demographics.git
-
-cd police-district-demographics
-```
-
-### 2. Install Dependencies
-You need both the frontend dependencies (Node.js) and backend processing tools (Python).
-#### Frontend:
-```bash
-npm install
-```
-#### Data Processing (Python):
-It is recommended to use a virtual environment.
-```bash
-python3 -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-### 3. Run the App Locally
-```bash
-npm run dev
-```
-Then open the URL shown in your terminal (usually ```http://localhost:5173```).
-
-## How to Add a New City 🆕
+## How to Add a New City 
 
 We have automated the process of adding new cities using GitHub Actions!
 
@@ -126,6 +97,35 @@ Output: A processed GeoJSON file will be generated in ```public/results/{STATE}/
 
 ### Step 5: Verify
 Run ```npm run dev``` and select your new city from the dropdown menu to verify the map loads and data populates correctly.
+
+## Locally Running the Calculator
+
+### 1. Clone the Repository
+```bash
+git clone git@github.com:lbelegu/police-district-demographics.git
+
+cd police-district-demographics
+```
+
+### 2. Install Dependencies
+You need both the frontend dependencies (Node.js) and backend processing tools (Python).
+#### Frontend:
+```bash
+npm install
+```
+#### Data Processing (Python):
+It is recommended to use a virtual environment.
+```bash
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 3. Run App 
+```bash
+npm run dev
+```
+Then open the URL shown in your terminal (usually ```http://localhost:5173```).
 
 ## License
 Distributed under the MIT License. See ```LICENSE``` for more information.
