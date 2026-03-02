@@ -325,6 +325,19 @@ export const CITIES = [
         "added_date": "2026-03-02",
         "source_date": "2026-03-02"
 
+    },
+    {
+
+        "id": "tucson-az",
+        "name": "Tucson, AZ",
+        "file": "AZ/tucson.geojson",
+        "lat": 32.1557,
+        "lng": -110.8825,
+        "src": "https://azgeo-open-data-agic.hub.arcgis.com/datasets/PimaMaps::tucson-police-department-patrol-sectors/about",
+        "district_field": "TMSECT",
+        "added_date": "2026-03-02",
+        "source_date": "2026-03-02"
+
     }
 ];
 
