@@ -312,6 +312,19 @@ export const CITIES = [
         "added_date": "2026-03-02",
         "source_date": "2026-03-02"
 
+    },
+    {
+
+        "id": "indianapolis-in",
+        "name": "Indianapolis, IN",
+        "file": "IN/indianapolis.geojson",
+        "lat": 39.7798,
+        "lng": -86.1331,
+        "src": "https://data.indy.gov/datasets/indianapolis-police-zones/explore?location=39.771065%2C-86.107110%2C10",
+        "district_field": "DISTRICT",
+        "added_date": "2026-03-02",
+        "source_date": "2026-03-02"
+
     }
 ];
 
