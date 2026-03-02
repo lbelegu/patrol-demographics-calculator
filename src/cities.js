@@ -110,26 +110,6 @@ export const CITIES = [
         source_date: "2025-11-01"
     },
     {
-        id: "detroit-mi",
-        name: "Detroit, MI",
-        file: "MI/detroit.geojson",
-        lat: 42.3528,
-        lng: -83.099,
-        src: "https://data.detroitmi.gov/datasets/dpd-precincts/explore",
-        added_date: "2026-01-09",
-        source_date: "2020-11-06"
-    },
-    {
-        id: "baltimore-md",
-        name: "Baltimore, MD",
-        file: "MD/baltimore.geojson",
-        lat: 39.2846,
-        lng: -76.6205,
-        src: "https://hub.arcgis.com/api/v3/datasets/3d893a4354944a629b3d16ee69cb02f1_0/downloads/data?format=geojson&spatialRefId=4326&where=1%3D1",
-        added_date: "2026-01-12",
-        source_date: "2025-07-17"
-    },
-    {
         id: "miami-fl",
         name: "Miami, FL",
         file: "FL/miami.geojson",
@@ -257,6 +237,17 @@ export const CITIES = [
     },
     {
 
+        "id": "baltimore-md",
+        "name": "Baltimore, MD",
+        "file": "MD/baltimore.geojson",
+        "lat": 39.2846,
+        "lng": -76.6205,
+        "src": "https://data.baltimorecity.gov/datasets/baltimore::police-districts-4/explore?location=39.284054%2C-76.618882%2C10",
+        "district_field": "Dist_Name",
+        "added_date": "2026-03-02",
+        "source_date": "2026-03-02"
+    },
+    {
         "id": "detroit-mi",
         "name": "Detroit, MI",
         "file": "MI/detroit.geojson",
@@ -266,7 +257,6 @@ export const CITIES = [
         "district_field": "name",
         "added_date": "2026-03-02",
         "source_date": "2026-03-02"
-
     }
 ];
 
