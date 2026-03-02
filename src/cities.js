@@ -254,6 +254,19 @@ export const CITIES = [
         "added_date": "2026-03-01",
         "source_date": "2026-02-24"
 
+    },
+    {
+
+        "id": "miami-fl",
+        "name": "Miami, FL",
+        "file": "FL/miami.geojson",
+        "lat": 25.7824,
+        "lng": -80.2278,
+        "src": "https://datahub-miamigis.opendata.arcgis.com/datasets/18ea60e4964943a4981b60d800fe28e0_0/explore?location=25.768175%2C-80.186260%2C12",
+        "district_field": "FID",
+        "added_date": "2026-03-02",
+        "source_date": "2026-03-02"
+
     }
 ];
 
