@@ -269,6 +269,19 @@ export const CITIES = [
         "added_date": "2026-03-02",
         "source_date": "2023-03-13"
 
+    },
+    {
+
+        "id": "san-antonio-tx",
+        "name": "San Antonio, TX",
+        "file": "TX/san_antonio.geojson",
+        "lat": 29.4574,
+        "lng": -98.5182,
+        "src": "https://opendata-cosagis.opendata.arcgis.com/datasets/CoSAGIS::sapd-districts/explore?location=29.458279%2C-98.517626%2C10",
+        "district_field": "DISTRICT",
+        "added_date": "2026-03-03",
+        "source_date": "2026-02-16"
+
     }
 ];
 
