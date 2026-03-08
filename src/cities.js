@@ -10,6 +10,26 @@ export const CITIES = [
         "source_date": "2025-10-09"
     },
     {
+        "id": 'Fort_Worth',
+        "name": "Fort Worth, TX",
+        "file": "TX/Fort_Worth.geojson",
+        "lat": 32.7815,
+        "lng": -97.3467,
+        "src": "https://police.fortworthtexas.gov/Patrol",
+        "added_date": "2026-03-08",
+        "source_date": "2025-03-08"
+    },
+    {
+        "id": 'Washington',
+        "name": "Washington D.C",
+        "file": "DC/Washington.geojson",
+        "lat": 38.9041,
+        "lng": -77.0172,
+        "src": "https://catalog.data.gov/dataset/police-service-areas/resource/b0a9a62c-c400-43b5-b8ea-84a61789e111",
+        "added_date": "2026-03-08",
+        "source_date": "2025-03-08"
+    },
+    {
         "id": 'charlotte-nc',
         "name": "Charlotte, NC",
         "file": "NC/charlotte.geojson",

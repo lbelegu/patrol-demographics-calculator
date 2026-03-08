@@ -11,7 +11,7 @@ TIGER_BASE = "https://www2.census.gov/geo/tiger/TIGER2023/BG/"
 # FIPS mapping remains consistent across years
 FIPS_CODES = {
     "AL": "01","AK": "02","AZ": "04","AR": "05","CA": "06",
-    "CO": "08","CT": "09","DE": "10","FL": "12","GA": "13",
+    "CO": "08","CT": "09","DE": "10","DC":"11","FL": "12","GA": "13",
     "HI": "15","ID": "16","IL": "17","IN": "18","IA": "19",
     "KS": "20","KY": "21","LA": "22","ME": "23","MD": "24",
     "MA": "25","MI": "26","MN": "27","MS": "28","MO": "29",
