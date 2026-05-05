@@ -302,6 +302,19 @@ export const CITIES = [
         "added_date": "2026-03-03",
         "source_date": "2026-02-16"
 
+    },
+    {
+
+        "id": "pittsburgh-pa",
+        "name": "Pittsburgh, PA",
+        "file": "PA/pittsburgh.geojson",
+        "lat": 40.4313,
+        "lng": -79.9806,
+        "src": "https://pghgishub-pittsburghpa.opendata.arcgis.com/datasets/230d80a6f1a2479faf501025f10ba903_0/explore?location=40.430841%2C-79.979853%2C12",
+        "district_field": "zone",
+        "added_date": "2026-05-05",
+        "source_date": "2025-08-20"
+
     }
 ];
 
