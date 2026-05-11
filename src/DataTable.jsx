@@ -79,7 +79,9 @@ export default function DataTable({ data, city }) {
             ...sortedRows.map(row =>
                 headers.map(header => {
                     const val = row[header] ?? 0;
-                    return `"${val}"`;
+                    // Round if it's a number, otherwise return as is
+                    const roundedVal = typeof val === 'number' ? Math.round(val) : val;
+                    return `"${roundedVal}"`;
                 }).join(",")
             )
         ].join("\n");
@@ -151,15 +153,34 @@ export default function DataTable({ data, city }) {
                         {sortedRows.map((row, idx) => (
                             <tr key={idx} className="hover:bg-gray-50">
                                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{row.DISTRICT}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.TOTAL.toLocaleString()}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.WHITE.toLocaleString()}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.BLACK.toLocaleString()}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.HISPANIC.toLocaleString()}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.ASIAN.toLocaleString()}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.AMERICAN_INDIAN.toLocaleString()}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.PACIFIC_ISLANDER.toLocaleString()}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.TWO_OR_MORE.toLocaleString()}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">{row.OTHER.toLocaleString()}</td>
+                                {/* Apply rounding to all numeric cells below */}
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">
+                                    {Math.round(row.TOTAL).toLocaleString()}
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">
+                                    {Math.round(row.WHITE).toLocaleString()}
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">
+                                    {Math.round(row.BLACK).toLocaleString()}
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">
+                                    {Math.round(row.HISPANIC).toLocaleString()}
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">
+                                    {Math.round(row.ASIAN).toLocaleString()}
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">
+                                    {Math.round(row.AMERICAN_INDIAN).toLocaleString()}
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">
+                                    {Math.round(row.PACIFIC_ISLANDER).toLocaleString()}
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">
+                                    {Math.round(row.TWO_OR_MORE).toLocaleString()}
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-500">
+                                    {Math.round(row.OTHER).toLocaleString()}
+                                </td>
                             </tr>
                         ))}
                     </tbody>

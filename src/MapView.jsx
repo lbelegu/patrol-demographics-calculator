@@ -93,7 +93,7 @@ export default function MapView({ city, data, activeDemographic }) {
                                 <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Selected District</h3>
                                 <div className="flex flex-row sm:flex-col justify-between items-baseline sm:items-start mt-0.5">
                                     <span className="text-lg sm:text-2xl font-bold text-gray-900 leading-none">{selectedDistrict.DISTRICT}</span>
-                                    <span className="text-xs sm:text-sm text-gray-600 sm:mt-1">Pop: <span className="font-semibold text-gray-900">{selectedDistrict.TOTAL?.toLocaleString()}</span></span>
+                                    <span className="text-xs sm:text-sm text-gray-600 sm:mt-1">Pop: <span className="font-semibold text-gray-900">{Math.round(selectedDistrict.TOTAL ?? 0).toLocaleString()}</span></span>
                                 </div>
                             </div>
 
