@@ -58,22 +58,28 @@ def fetch_bg_vars_for_county(state_fips, county_fips, max_retries=3):
         url += f"&key={CENSUS_API_KEY}"
 
     for attempt in range(1, max_retries + 1):
-        resp = requests.get(url)
-        if resp.status_code == 204:
-            return pd.DataFrame()
-        if resp.status_code == 200:
-            try:
-                data = resp.json()
-                df = pd.DataFrame(data[1:], columns=data[0])
-                df["GEOID"] = (
-                    df["state"].str.zfill(2) +
-                    df["county"].str.zfill(3) +
-                    df["tract"].str.zfill(6) +
-                    df["block group"].str.zfill(1)
-                )
-                return df.drop(columns=["NAME"])
-            except Exception as e:
-                continue
+        try:
+            resp = requests.get(url, timeout=30)
+            if resp.status_code == 204:
+                return pd.DataFrame()
+            resp.raise_for_status()
+            data = resp.json()
+            # Census API error responses come back as dicts, not lists
+            if isinstance(data, dict):
+                print(f"  ⚠️  Census API error for county {county_fips}: {data}")
+                return pd.DataFrame()
+            df = pd.DataFrame(data[1:], columns=data[0])
+            df["GEOID"] = (
+                df["state"].str.zfill(2) +
+                df["county"].str.zfill(3) +
+                df["tract"].str.zfill(6) +
+                df["block group"].str.zfill(1)
+            )
+            return df.drop(columns=["NAME"])
+        except Exception as e:
+            print(f"  ⚠️  Attempt {attempt}/{max_retries} failed for county {county_fips}: {e}")
+            if attempt < max_retries:
+                time.sleep(2 ** attempt)  # exponential back-off
     return pd.DataFrame()
 
 def fetch_census_for_counties(state_fips: str, counties: list) -> pd.DataFrame:
@@ -127,6 +133,14 @@ def process_city(state: str, city: str, district_field: str):
 
     unique_counties = sorted(list({str(g)[2:5] for g in census_clip["GEOID"].astype(str)}))
     census_vars_df = fetch_census_for_counties(state_fips, unique_counties)
+
+    if census_vars_df.empty or "GEOID" not in census_vars_df.columns:
+        raise RuntimeError(
+            f"Census API returned no data for state {state_fips}, "
+            f"counties {unique_counties}. "
+            "Check that the CENSUS_API_KEY secret is set and the Census API is reachable."
+        )
+
     census_vars_df["GEOID"] = census_vars_df["GEOID"].astype(str)
 
     for code, friendly in MAPPING.items():
