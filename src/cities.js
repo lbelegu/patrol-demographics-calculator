@@ -315,6 +315,19 @@ export const CITIES = [
         "added_date": "2026-05-05",
         "source_date": "2025-08-20"
 
+    },
+    {
+
+        "id": "rochester-ny",
+        "name": "Rochester, NY",
+        "file": "NY/rochester.geojson",
+        "lat": 43.1855,
+        "lng": -77.617,
+        "src": "https://data-rpdny.opendata.arcgis.com/datasets/rpdny::rpd-beats-/about",
+        "district_field": "Beat",
+        "added_date": "2026-05-14",
+        "source_date": "2017-02-09"
+
     }
 ];
 
