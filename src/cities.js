@@ -328,6 +328,19 @@ export const CITIES = [
         "added_date": "2026-05-14",
         "source_date": "2017-02-09"
 
+    },
+    {
+
+        "id": "buffalo-ny",
+        "name": "Buffalo, NY",
+        "file": "NY/buffalo.geojson",
+        "lat": 42.8962,
+        "lng": -78.8538,
+        "src": "https://data.buffalony.gov/Public-Safety/Police-Districts/fyvw-ymqj",
+        "district_field": "name",
+        "added_date": "2026-05-15",
+        "source_date": "2026-04-28"
+
     }
 ];
 
