@@ -75,7 +75,8 @@ export default function MapView({ city, data, activeDemographic }) {
         <div className="relative h-[600px] w-full">
             <MapContainer center={[centerLat, centerLng]} zoom={zoomLevel} style={{ height: "100%", width: "100%" }} minZoom={4}>
                 <RecenterMap lat={centerLat} lng={centerLng} zoom={zoomLevel} />
-                <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" attribution='&copy; OpenStreetMap' />
+                <TileLayer url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}" attribution='Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors' maxZoom={16} />
+                <TileLayer url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}" maxZoom={16} />
                 {data && city && <GeoJSON key={`${city.id}-${activeDemographic}`} data={data} onEachFeature={onEachFeature} style={getStyle} />}
             </MapContainer>
 
